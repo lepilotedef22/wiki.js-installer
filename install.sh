@@ -21,7 +21,7 @@ echo "Downloading installation files for Wiki.js..."
 wget https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
 
 echo "Decompressing the archive..."
-mkdir wiki
+mkdir wiki_temp
 tar xzf wiki-js.tar.gz -C ./wiki_temp
 cd wiki_temp
 
