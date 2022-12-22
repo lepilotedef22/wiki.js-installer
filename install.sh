@@ -25,7 +25,11 @@ mkdir wiki_temp
 tar xzf wiki-js.tar.gz -C ./wiki_temp
 cd wiki_temp
 
-echo " Creating the directories..."
+echo "Creating the directories..."
 sudo mkdir /var/wiki/
-sudo mkdir /var/wiki/sqlite
 npm rebuild sqlite3
+
+echo "Moving the files to the right directory..."
+cd ..
+sudo mv wiki_temp /var/wiki
+sudo mkdir /var/wiki/sqlite
